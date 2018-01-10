@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: grid;
+      grid-template-areas:
+        "hdr"
+        "nav"
+        "main"
+        "side"
+        "ftr";
+    }
+    @media (min-width: 500px) {
+      body {
+        grid-template-columns: minmax(200px, 250px) minmax(350px, 450px);
+        grid-template-areas:
+          "hdr hdr"
+          "nav nav"
+          "side main"
+          "ftr ftr";
+      }
+    }
+    @media (min-width: 700px) {
+      body {
+        grid-template-columns:
+          250px minmax(450px, 1fr);
+
+        grid-template-areas:
+          "hdr hdr"
+          "nav nav"
+          "side main"
+          "ftr ftr"
+      }
+    }
+    header {
+      background-color: #AAA;
+      grid-area: hdr;
+    }
+    nav {
+      background-color: #EEE;
+      grid-area: nav;
+    }
+    aside {
+      background-color: #DDD;
+      grid-area: side;
+    }
+    p {
+      padding: 10px;
+    }
+    p:first-of-type {
+      padding: 10px 10px 0 10px;
+    }
+    article {
+      grid-area: main;
+      text-align: justify;
+    }
+    footer {
+      background-color: #AAA;
+      grid-area: ftr;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Header
+  </header>
+  <nav>
+    Navigation
+  </nav>
+  <aside>
+    Sidebar
+  </aside>
+  <article>
+    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+  </article>
+  <footer>
+    Footer
+  </footer>
+</body>
+</html>
