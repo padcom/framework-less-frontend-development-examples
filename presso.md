@@ -14,22 +14,17 @@
 
 ---
 
-# 2018-01-09
+# Tuesday January 9th, 2018
 
-## The day the world changed
+### The day the world changed
 
----
-
-![Windows 8.1 Terminated](win81-terminated.jpg)
 ---
 
 ![IE Dead](ie-dead.jpg)
 
 ---
 
-## Remember
-
-<br/>
+## The Basics
 
 **HTML**/**DOM** is the representation of concepts
 **CSS** determines how they look like and what is their positioning
@@ -264,10 +259,44 @@ body {
 > {} + {}
 NaN
 ```
+---
+
+# Asynchronous operations
+
+https://caniuse.com/#feat=async-functions
 
 ---
 
-## JavaScript without frameworks?
+```javascript
+function resolveAfterXSeconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => { resolve('resolved') }, x);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling');
+  const result = await resolveAfterXSeconds(1);
+  console.log(result);
+}
+
+asyncCall();
+```
+
+---
+
+# DOM manipulation
+
+https://caniuse.com/#feat=classlist
+https://caniuse.com/#feat=insert-adjacent
+https://caniuse.com/#search=dataset
+
+https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
+
+---
+
+## JavaScript without frameworks
 
 ```javascript
 for (let i = 0; i < 100; i++) {
@@ -275,6 +304,7 @@ for (let i = 0; i < 100; i++) {
     .toString(16).padStart(6, '0');
 
   const div = document.createElement('div')
+  div.dataset.color = '#' + color;
   div.style.backgroundColor = '#' + color
   div.innerText = '#' + color
   div.classList.add('item')
@@ -284,9 +314,17 @@ for (let i = 0; i < 100; i++) {
   if (rnd > 0.5 && rnd < 0.75) div.classList.add('two')
   if (rnd > 0.75) div.classList.add('three')
 
-  document.body.appendChild(div)
+  document.body.insertAdjacentElement('beforeend', div)
 }
 ```
+
+---
+
+# Maintainability
+
+https://caniuse.com/#feat=es6-class
+https://caniuse.com/#feat=custom-elements
+https://www.polymer-project.org/
 
 ---
 
@@ -327,6 +365,12 @@ for (let i = 0; i < 100; i++) {
   )
 }
 ```
+
+---
+
+# Modularity
+
+https://caniuse.com/#search=module
 
 ---
 
@@ -511,3 +555,13 @@ Please note: this is the real CSS3 selector used here, not some pseudo selector 
 ---
 
 # May the platform be with you!
+
+Slides available at:
+
+https://bit.ly/flfdev
+
+Blog:
+https://padcom13.blogspot.com
+
+LinkedIn:
+https://linkedin.com/in/padcom
