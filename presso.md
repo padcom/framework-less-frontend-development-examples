@@ -170,7 +170,7 @@ body {
 @media (min-width: 500px) {
   body {
     grid-template-columns:
-      minmax(200px, 250px) minmax(350px, 450px);
+      minmax(200px, 300px) minmax(350px, 500px);
 
     grid-template-areas:
       "header     header"
@@ -186,10 +186,10 @@ body {
 ## Let's go big screen - fluid layout
 
 ```css
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   body {
     grid-template-columns:
-      minmax(250px, 350px) minmax(450px, 1fr);
+      300px minmax(500px, 1fr);
 
     grid-template-areas:
       "header     header"
@@ -205,10 +205,10 @@ body {
 ## Let's go big screen - fixed layout
 
 ```css
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   body {
     grid-template-columns:
-     1fr minmax(200px, 250px) minmax(350px, 450px) 1fr;
+      1fr 300px 500px 1fr;
 
     grid-template-areas:
       ". header     header     ."
@@ -221,19 +221,19 @@ body {
 
 ---
 
-## Where did the ```700px``` came from?
+## Where did the ```800px``` came from?
 
 ```
 @media (min-width: 500px) {
   body {
     grid-template-columns:
-      minmax(200px, 250px) minmax(350px, 450px);
+      minmax(200px, 300px) minmax(350px, 500px);
   }
 }
 ```
 
 <div style="text-align: center; font-size: 40px; padding-top: 50px;">
-  <b>250px</b> + <b>450px</b> = <b>700px</b>
+  <b>300px</b> + <b>500px</b> = <b>800px</b>
 </div>
 
 ---
@@ -300,10 +300,11 @@ https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
 
 ```javascript
 for (let i = 0; i < 100; i++) {
+  const div = document.createElement('div')
+
   const color = Math.round(Math.random() * 0xffffff)
     .toString(16).padStart(6, '0');
 
-  const div = document.createElement('div')
   div.dataset.color = '#' + color;
   div.style.backgroundColor = '#' + color
   div.innerText = '#' + color
@@ -368,6 +369,27 @@ for (let i = 0; i < 100; i++) {
 
 ---
 
+# Readability
+
+https://caniuse.com/#feat=template-literals
+
+---
+
+## Definig multiline template literals
+
+```javascript
+const variable = 'this'
+
+const square = x => x * x
+
+const template = `Hello!
+This is a multiline string that you can have
+placeholders such as ${variable}, ${1 + 2}
+or ${square(2)} in.`
+```
+
+---
+
 # Modularity
 
 https://caniuse.com/#search=module
@@ -388,8 +410,6 @@ https://caniuse.com/#search=module
   <link rel="stylesheet" href="./index4.css">
 </head>
 <body>
-  <script type="module" src="./random-color-box.js">
-  </script>
   <script type="module" src="./index4.js"></script>
 </body>
 </html>
@@ -431,6 +451,12 @@ export class RandomColorBox extends HTMLElement {
   getRandomClass () { ... }
 }
 ```
+
+---
+
+# Arrow functions
+
+https://caniuse.com/#feat=arrow-functions
 
 ---
 
@@ -486,26 +512,6 @@ click()
 
 ---
 
-## Higher order functions
-
-Pre-ECMAScript using regular functions
-```javascript
-function adder (a) {
-  return function (b) {
-    return a + b
-  }
-}
-```
-
-<br/>
-
-Using fat arrow function expression
-```javascript
-const adder = a => b => a + b)
-```
-
----
-
 ## Collections API
 
 ```javascript
@@ -515,12 +521,20 @@ const b = a.map(i => i.x)
 b.reduce((acc, x) => acc + x)
 b.reduce((acc, x) => acc * x)
 b.reduce((acc, x) => acc + ',' + x) // b.join(',')
-b.some(x => x %% 2 == 0)
-b.some(x => x < 10)
-b.find(x => x %% 2 == 0)
-b.filter(x => x %% 2 == 0)
+b.some(x => x % 2 == 0)
+b.every(x => x < 10)
+b.find(x => x % 2 == 0)
+b.findIndex(x => x % 2 == 0)
+b.filter(x => x % 2 == 0)
 b.forEach(console.log)
 ```
+
+---
+
+# DOM Traversal
+
+https://caniuse.com/#feat=queryselector
+https://caniuse.com/#feat=element-closest
 
 ---
 
@@ -532,6 +546,8 @@ const divs = document.querySelectorAll('div')
 
 const input = div.querySelector('input[type=text]')
 const inputs = div.querySelectorAll('input[type=text]')
+
+const body = div.closest('body')
 ```
 
 <br/>
@@ -545,8 +561,8 @@ Please note: this is the real CSS3 selector used here, not some pseudo selector 
 ---
 
 ## When in doubt use http://caniuse.com
-## Favor polyfills over massive frameworks
-## Use frameworks that with the plarform*
+## Favor polyfills over frameworks
+## Use frameworks that work with the plarform*
 
 ---
 
@@ -558,7 +574,7 @@ Please note: this is the real CSS3 selector used here, not some pseudo selector 
 
 Slides available at:
 
-https://bit.ly/flfdev
+http://bit.ly/2EvmC3U
 
 Blog:
 https://padcom13.blogspot.com

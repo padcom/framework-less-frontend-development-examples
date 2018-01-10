@@ -54,7 +54,7 @@
       if (rnd > 0.25 && rnd < 0.5) div.classList.add('one')
       if (rnd > 0.5 && rnd < 0.75) div.classList.add('two')
       if (rnd > 0.75) div.classList.add('three')
-      document.body.appendChild(div)
+      document.body.insertAdjacentElement('beforeend', div)
     }
   </script>
 </body>
