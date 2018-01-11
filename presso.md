@@ -393,6 +393,7 @@ or ${square(2)} in.`
 # Modularity
 
 https://caniuse.com/#search=module
+https://twitter.com/FirefoxNightly/status/951382754125545473
 
 ---
 
