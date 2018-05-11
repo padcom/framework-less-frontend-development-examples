@@ -1,3 +1,5 @@
+import { someFancyHandler } from './handlers.js'
+
 /**
  * RandomColorBox component
  * 
@@ -13,5 +15,9 @@ export class RandomColorBox extends HTMLElement {
     if (rnd > 0.25 && rnd < 0.5) this.classList.add('one')
     if (rnd > 0.5 && rnd < 0.75) this.classList.add('two')
     if (rnd > 0.75) this.classList.add('three')
+
+    this.addEventListener('click', e => {
+      someFancyHandler(color)
+    })
   }
 }

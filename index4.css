@@ -18,6 +18,11 @@ random-color-box {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+random-color-box:hover {
+  filter: brightness(85%);
 }
 
 .one {

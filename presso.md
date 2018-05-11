@@ -1,7 +1,7 @@
 <!--
   $theme: default
   pretender: true
-  footer: Matthias Hryniszak - ITee&Cofee 11.01.2018
+  footer: Matthias Hryniszak - InfoMEET 2018-05-12
 -->
 
 <!--
@@ -14,6 +14,8 @@
 
 ---
 
+---
+
 # Tuesday January 9th, 2018
 
 ### The day the world changed
@@ -23,7 +25,7 @@
 ![IE Dead](ie-dead.jpg)
 
 ---
-
+	
 ## The Basics
 
 **HTML**/**DOM** is the representation of concepts
@@ -62,7 +64,7 @@
 
 ---
 
-## Semantic HTML using html5
+## Semantic HTML using HTML5
 
 ```html
 <body>
@@ -119,7 +121,7 @@
 
 ---
 
-## Let's get you lying out on a grid
+## Let's get you laid out on a grid
 
 ```css
 body {
@@ -469,6 +471,7 @@ function click(e) {
 }
 
 click()
+
 $('body').on('click', click)
 ```
 
@@ -482,6 +485,7 @@ function click(e) {
 }
 
 click()
+
 $('body').on('click', click)
 ```
 
@@ -497,6 +501,7 @@ function click(e) {
 }
 
 click()
+
 $('body').on('click', click)
 ```
 
@@ -553,7 +558,7 @@ const body = div.closest('body')
 
 <br/>
 
-Please note: this is the real CSS3 selector used here, not some pseudo selector invented for the purpose of making up for ancient browser shortcomings!
+Please note: this is the real CSS3 selector used here, not some pseudo selector invented for the purpose of fixing ancient browser shortcomings!
 
 ---
 
@@ -561,7 +566,7 @@ Please note: this is the real CSS3 selector used here, not some pseudo selector 
 
 ---
 
-## When in doubt use http://caniuse.com
+## When in doubt see http://caniuse.com
 ## Favor polyfills over frameworks
 ## Use frameworks that work with the plarform*
 
@@ -572,10 +577,6 @@ Please note: this is the real CSS3 selector used here, not some pseudo selector 
 ---
 
 # May the platform be with you!
-
-Slides available at:
-
-http://bit.ly/2EvmC3U
 
 Blog:
 https://padcom13.blogspot.com
