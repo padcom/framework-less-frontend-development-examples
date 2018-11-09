@@ -1,7 +1,7 @@
 <!--
   $theme: default
   pretender: true
-  footer: Matthias Hryniszak - InfoMEET 2018-05-12
+  footer: Matthias Hryniszak - InfoMEET 2018-11-10
 -->
 
 <!--
