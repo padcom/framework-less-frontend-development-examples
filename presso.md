@@ -263,6 +263,25 @@ NaN
 ```
 ---
 
+## JavaScript - is getting better :smile:
+
+```javascript
+
+
+> [] + []
+""
+
+> [] + {}
+"[object Object]"
+
+> {} + []
+0
+
+> {} + {}
+"[object Object][object Object]"
+```
+
+---
 # Asynchronous operations
 
 https://caniuse.com/#feat=async-functions
