@@ -1,7 +1,7 @@
 <!--
   $theme: default
   pretender: true
-  footer: Matthias Hryniszak - InfoMEET 2018-11-10
+  footer: Matthias Hryniszak - InfoMEET 2018-11-17
 -->
 
 <!--
@@ -101,7 +101,7 @@
 
 ---
 
-## CSS Layouts as it exists Today
+## CSS Layouts as they exist Today
 
 * Grid (https://caniuse.com/#search=grid)
 
@@ -121,7 +121,7 @@
 
 ---
 
-## Let's get you laid out on a grid
+## Let's put you out on a grid
 
 ```css
 body {
@@ -346,6 +346,7 @@ for (let i = 0; i < 100; i++) {
 
 https://caniuse.com/#feat=es6-class
 https://caniuse.com/#feat=custom-elements
+https://github.com/webcomponents/custom-elements (polyfill)
 https://www.polymer-project.org/
 
 ---
@@ -586,7 +587,7 @@ Please note: this is the real CSS3 selector used here, not some pseudo selector 
 ---
 
 ## When in doubt see http://caniuse.com
-## Favor polyfills over frameworks
+## Prefer polyfills over frameworks
 ## Use frameworks that work with the plarform*
 
 ---
@@ -602,3 +603,6 @@ https://padcom13.blogspot.com
 
 LinkedIn:
 https://linkedin.com/in/padcom
+
+This presentation:
+https://bit.ly/2Q5hE7z
